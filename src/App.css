@@ -1,38 +1,184 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:wght@400;600&display=swap');
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Ibarra Real Nova', serif;
+}
+.small, small {
+  font-size: .575em;
+}
+.menu-link {
+  text-decoration: none;
+  color: black;
+}
+.menu-link-active {
+  font-weight: 600;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.marquee {
+  margin: 0 auto;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
+  font-size: 2.5rem;
+  color: black;
+  z-index: 9999;
+  border-top: 2px solid black;
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  background-color: white;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.marquee-inverted span {
+  background-color: #e0ff58!important;
+  color: #517ec1;
+}
+
+.marquee-slow span {
+  animation: marquee 70s linear infinite!important;
+}
+
+.marquee span {
+  z-index: 9999;
+  font-family: 'Ibarra Real Nova', serif;
+  font-weight: 100;
+  display: inline-block;
+  animation: marquee 7s linear infinite;
+  background-color: white;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-100%, 0);
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.participant-timeline > .row {
+  display: block;
+  overflow-x: auto;
+  white-space: nowrap;
+  flex-wrap: nowrap;
 }
 
-.App-link {
-  color: #61dafb;
+.participant-timeline > .row > .col-lg-2, .col-md-3, .col-sm-6, .col-12 {
+  display: inline-block;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.participant-username {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+}
+
+.piece-description {
+  line-height: 0.6rem;
+  white-space: pre-wrap;
+  margin-bottom: 0.5rem;
+}
+
+.form-signin {
+  max-width: 330px;
+  padding: 15px;
+}
+
+.form-signin .form-floating:focus-within {
+  z-index: 2;
+}
+
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.nav-pills .nav-link {
+  border-radius: 0px;
+}
+
+.nav-pills .nav-link.active{
+  background-color: white;
+  border: 1px solid black;
+  color: black;
+}
+
+.nav-link {
+  color: black;
+}
+
+.nav-link:hover {
+  color: #2a2a2a;
+}
+
+.react-datepicker__header {
+  background-color: #ffffff!important;
+}
+.react-datepicker__day--selected {
+  border-radius: 0rem!important;
+  background-color: black!important;
+}
+.react-datepicker__day--today {
+  border: 1px solid black!important;
+}
+.btn, .form-control {
+  border-radius: 0px;
+}
+
+.list-group-item:last-child {
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+
+.list-group-item:first-child {
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+}
+
+.btn-top-right {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+}
+
+.text-area-small {
+  padding: 0.275rem 0.375rem;
+  font-size: 0.6rem;
+  margin-top: 5px;
+}
+
+.form-check-input:checked {
+  background-color: #060606;
+  border-color: #7f7f7f;
+}
+
+.form-control-xs {
+  min-height: calc(1.5em + 0.5rem + 2px);
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  font-size: .575em;
+}
+
+@media (min-width: 450px) {
+
+}
+
+@media (min-width: 768px) {
+
+}
+
+@media (min-width: 992px) {
+
+}
+
+@media (min-width: 1200px) {
+  .logo-margin {
+    margin-left: 100px;
   }
 }
