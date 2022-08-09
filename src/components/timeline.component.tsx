@@ -28,9 +28,7 @@ export function Timeline({in_participant}: {in_participant: Participant}) {
                         {
                             participant.pieces.map((p: Piece) => {
                                 return (
-                                    <>
-                                        <PieceComponent key={p.slug} in_piece={p} />
-                                    </>
+                                    <PieceComponent key={p.slug} in_piece={p} />
                                 )
                             })
                         }
