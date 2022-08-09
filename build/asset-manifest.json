@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.b171b9c5.css",
-    "main.js": "/static/js/main.63975adf.js",
+    "main.js": "/static/js/main.ad4323e2.js",
     "static/js/787.ea29de83.chunk.js": "/static/js/787.ea29de83.chunk.js",
     "static/media/gen3.png": "/static/media/gen3.f43a65bf5ca7f8750d0a.png",
     "static/media/MessinaSans-Bold.otf": "/static/media/MessinaSans-Bold.6faa92aea2c75baee587.otf",
@@ -12,11 +12,11 @@
     "index.html": "/index.html",
     "static/media/getFetch.cjs": "/static/media/getFetch.c780682470504fffbd04.cjs",
     "main.b171b9c5.css.map": "/static/css/main.b171b9c5.css.map",
-    "main.63975adf.js.map": "/static/js/main.63975adf.js.map",
+    "main.ad4323e2.js.map": "/static/js/main.ad4323e2.js.map",
     "787.ea29de83.chunk.js.map": "/static/js/787.ea29de83.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b171b9c5.css",
-    "static/js/main.63975adf.js"
+    "static/js/main.ad4323e2.js"
   ]
 }
