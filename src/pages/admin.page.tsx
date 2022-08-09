@@ -14,18 +14,8 @@ export function AdminPage() {
     useEffect(() => {
     }, [state]);
 
-    if (state.token === "")
-        return (
-            <>
-                <LoginPage />
-            </>
-        )
-    else
-        return (
-            <>
-                <InnerAdminPage/>
-            </>
-        )
+    if (state.token === "") { return <LoginPage/> }
+    else { return <InnerAdminPage/> }
 }
 
 function InnerAdminPage() {

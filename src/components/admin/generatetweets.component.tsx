@@ -1,38 +1,60 @@
 import React, {useEffect, useState} from "react";
-import {fetchNewTweets, rawTweet, submitNewTweets} from "../../services/auth.service";
+import {fetchNewTweets, getParticipantsFilters, rawTweet, submitNewTweets} from "../../services/auth.service";
 import DatePicker from "react-datepicker";
 import {Piece} from "../../services/exhibiion.service";
+import Select from 'react-select'
+import {Loading} from "../loading.component";
+
+interface ParticipantFilterProp {
+    value: string,
+    label: string
+}
 
 export function GenerateTwitterPage() {
     const [loading, setloading] = useState(false);
+    const [fetching, setFetching] = useState(false);
     const [startDate, setStartDate] = useState(new Date());
     const [rawTweets, setRawTweets] = useState<rawTweet[]>([]);
     const [pieces, setPieces] = useState<Piece[]>([]);
+    const [listParticipantsFilters, setListParticipantsFilters] = useState<ParticipantFilterProp[]>([])
+    const [participantsFilters, setParticipantsFilters] = useState<ParticipantFilterProp[]>([])
 
+
+    useEffect(() => {
+        setloading(true);
+        getParticipantsFilters()
+            .then(res => {
+                setParticipantsFilters(res.data);
+                setListParticipantsFilters(res.data);
+            })
+            .catch(err => console.log(err))
+            .finally(() => setloading(false));
+    }, [])
 
     function handleFetchNewTweets() {
-        setloading(true);
+        setFetching(true);
         setPieces([]);
         setRawTweets([]);
-        fetchNewTweets(startDate).then(res => {
+        console.log(participantsFilters)
+        fetchNewTweets(startDate, participantsFilters.map((p: ParticipantFilterProp) => p.value)).then(res => {
             let temp: rawTweet[] = res.data;
             temp.sort((a,b) => a.username.localeCompare(b.username));
             setRawTweets(temp);
         }).catch(err => {
             console.log(err);
         }).finally(() => {
-            setloading(false);
+            setFetching(false);
         });
     }
 
     function handlePostNewTweets() {
-        setloading(true);
+        setFetching(true);
         submitNewTweets(rawTweets).then(res => {
             setPieces(res.data);
         }).catch(err => {
             console.log(err);
         }).finally(() => {
-            setloading(false);
+            setFetching(false);
         });
     }
 
@@ -46,9 +68,11 @@ export function GenerateTwitterPage() {
         }
     }
 
+    if (loading) return <Loading/>
+
     return (
         <div className="row">
-            <div className="col-4">
+            <div className="col-6">
                 <div className="row g-3">
                     <div className="col-auto">
                         <DatePicker
@@ -59,8 +83,17 @@ export function GenerateTwitterPage() {
                         />
                     </div>
                     <div className="col-auto">
+                        <Select
+                            isMulti
+                            defaultValue={listParticipantsFilters}
+                            options={participantsFilters}
+                            isClearable={true}
+                            onChange={(e) => setParticipantsFilters(e as ParticipantFilterProp[])}
+                        />
+                    </div>
+                    <div className="col-auto">
                         <button className="btn btn-dark mb-2" onClick={handleFetchNewTweets}>
-                            {loading && <span className="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>} generate
+                            {fetching && <span className="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>} generate
                         </button>
                     </div>
                 </div>
@@ -82,7 +115,7 @@ export function GenerateTwitterPage() {
                         {
                             (rawTweets.length > 0) && (
                                 <button className="btn btn-dark my-2 float-end" onClick={handlePostNewTweets}>
-                                    {loading && <span className="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>} store tweets
+                                    {fetching && <span className="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>} store tweets
                                 </button>
                             )
                         }

@@ -1,8 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:wght@400;600&display=swap');
 
+@font-face {
+  font-family: 'MessinaSans';
+  font-weight: 200;
+  src: local('MessinaSans'), url(./assets/fonts/MessinaSans-Light.otf) format('opentype');
+}
+
+@font-face {
+  font-family: 'MessinaSans';
+  src: local('MessinaSans'), url(./assets/fonts/MessinaSans-Regular.otf) format('opentype');
+}
+
+@font-face {
+  font-family: 'MessinaSans';
+  font-weight: 600;
+  src: local('MessinaSans'), url(./assets/fonts/MessinaSans-Bold.otf) format('opentype');
+}
+
+
 h1, h2, h3, h4, h5 {
   font-family: 'Ibarra Real Nova', serif;
 }
+a, p, small, .btn {
+  font-family: MessinaSans, serif;
+}
+
 .small, small {
   font-size: .575em;
 }
@@ -163,6 +185,11 @@ h1, h2, h3, h4, h5 {
   padding: 0.25rem 0.5rem;
   border-radius: 0.25rem;
   font-size: .575em;
+}
+
+.piece-image {
+  padding: 10px;
+  border: 1px solid black;
 }
 
 @media (min-width: 450px) {

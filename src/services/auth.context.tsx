@@ -56,6 +56,7 @@ export const ContextProvider = (props: any) => {
             const decoded: any = jwtDecode(token);
             if (decoded.exp < Date.now() / 1000) {
                 localStorage.clear();
+                logout();
                 return false;
             }
             return true;

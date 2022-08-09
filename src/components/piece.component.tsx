@@ -2,12 +2,15 @@ import * as React from 'react';
 import {Piece} from "../services/exhibiion.service";
 import {useEffect, useState} from "react";
 import placeholder from "../assets/images/placeholder.jpg"
+import {Link} from "react-router-dom";
+import {useTranslation} from "react-i18next";
 
 
 // @ts-ignore
 export function PieceComponent({in_piece}: {in_piece: Piece}) {
     const [piece, setPiece] = useState<Piece>(in_piece)
     const [flipped, setFliped] = useState(false)
+    const { t } = useTranslation();
 
     useEffect(() => {
         setPiece(in_piece)
@@ -16,7 +19,7 @@ export function PieceComponent({in_piece}: {in_piece: Piece}) {
     return (
         <div className="col-xl-2 col-lg-3 col-sm-6 col-12" style={{verticalAlign: "top"}}>
             <div onMouseLeave={() => setFliped(false)}>
-                <div className={flipped ? "d-none" : "d-block"}>
+                <div className={(flipped ? "d-none" : "d-block")}>
                     {
                         piece.artifact_url_1 === null ? (<img alt="placeholder" className="img-fluid" src={placeholder} onMouseEnter={() => setFliped(true)}/>) :
                             (
@@ -35,55 +38,9 @@ export function PieceComponent({in_piece}: {in_piece: Piece}) {
                     </div>
                 </div>
                 <div className={flipped ? "d-block" : "d-none"}>
-                    <p className="piece-description"><small><b>testo originale:</b><br />{piece.input_original}</small></p>
-                    <p className="piece-description"><small><b>testo tradotto:</b><br />{piece.input_translated}</small></p>
-                    <p className="piece-description mb-1"><small><b>set immagini completo:</b></small></p>
-                    <div className="row">
-                        <div className="col-3">
-                            {
-                                piece.artifact_url_1 === null ? (
-                                    <img alt="placeholder" className="img-fluid" src={placeholder}/>
-                                ) : (
-                                    <a href={piece.artifact_url_1} target="_blank" rel="noreferrer">
-                                        <img alt={piece.input_translated} className="img-fluid" src={piece.artifact_url_1}/>
-                                    </a>
-                                )
-                            }
-                        </div>
-                        <div className="col-3">
-                            {
-                                piece.artifact_url_2 === null ? (
-                                    <img alt="placeholder" className="img-fluid" src={placeholder}/>
-                                ) : (
-                                    <a href={piece.artifact_url_2} target="_blank" rel="noreferrer">
-                                        <img alt={piece.input_translated} className="img-fluid" src={piece.artifact_url_2}/>
-                                    </a>
-                                )
-                            }
-                        </div>
-                        <div className="col-3">
-                            {
-                                piece.artifact_url_2 === null ? (
-                                    <img alt="placeholder" className="img-fluid" src={placeholder}/>
-                                ) : (
-                                    <a href={piece.artifact_url_2} target="_blank" rel="noreferrer">
-                                        <img alt={piece.input_translated} className="img-fluid" src={piece.artifact_url_2}/>
-                                    </a>
-                                )
-                            }
-                        </div>
-                        <div className="col-3">
-                            {
-                                piece.artifact_url_3 === null ? (
-                                    <img alt="placeholder" className="img-fluid" src={placeholder}/>
-                                ) : (
-                                    <a href={piece.artifact_url_3} target="_blank" rel="noreferrer">
-                                        <img alt={piece.input_translated} className="img-fluid" src={piece.artifact_url_3}/>
-                                    </a>
-                                )
-                            }
-                        </div>
-                    </div>
+                    <p className="piece-description"><small><b>{t('ORIGINAL_TEXT')}:</b><br />{piece.input_original}</small></p>
+                    <p className="piece-description"><small><b>{t('TRANSLATED_TEXT')}:</b><br />{piece.input_translated}</small></p>
+                    <Link to={"/piece/" + piece.tweet_id} className="mt-4 btn btn-sm btn-dark">{t('BTN_SHOW')}</Link>
                 </div>
             </div>
         </div>

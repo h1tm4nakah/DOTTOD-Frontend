@@ -12,6 +12,7 @@ export interface Piece {
     artifact_url_4: string,
     tweeted_at: string,
     tweet_id: string,
+    participant?: Participant,
 }
 
 export interface Participant {
@@ -22,7 +23,16 @@ export interface Participant {
 }
 
 export const fetchExhibition = () => {
-    console.log(API_URL);
     // @ts-ignore
     return axios.get(API_URL + '/api/exhibition');
+}
+
+export const fetchPiece = (tweet_id: string) => {
+    // @ts-ignore
+    return axios.get(API_URL + '/api/exhibition/piece/' + tweet_id);
+}
+
+export const fetchParticipant = (username: string) => {
+    // @ts-ignore
+    return axios.get(API_URL + '/api/exhibition/participant/' + username);
 }

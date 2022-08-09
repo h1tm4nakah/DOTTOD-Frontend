@@ -45,12 +45,12 @@ export interface rawTweet {
     username: string
 }
 
-export const fetchNewTweets = (selectedDate: Date) => {
+export const fetchNewTweets = (selectedDate: Date, usernames: string[]) => {
     const [date, time] = selectedDate.toISOString().split("T");
     const [year, month, day] = date.split("-");
     const string_date = '?date=' + day + '/' + month + '/' + year ;
     // @ts-ignore
-    return axios.get(API_URL + "tweets/generate" + string_date, { headers: authHeader() });
+    return axios.get(API_URL + "tweets/generate" + string_date + "&usernames=" + usernames, { headers: authHeader() });
 }
 
 export const submitNewTweets = (tweets: rawTweet[]) => {
@@ -116,4 +116,9 @@ export const postGeneratedImages = (tweet_id: string, i1: string, i2: string, i3
     }
     // @ts-ignore
     return axios.patch(API_URL + "tweets/images/" + tweet_id, jsonData, { headers: authHeader() });
+}
+
+export const getParticipantsFilters = () => {
+    // @ts-ignore
+    return axios.get(API_URL + "participants", { headers: authHeader() });
 }

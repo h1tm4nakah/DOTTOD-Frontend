@@ -1,16 +1,22 @@
 {
   "files": {
-    "main.css": "/static/css/main.b53df286.css",
-    "main.js": "/static/js/main.1a152560.js",
+    "main.css": "/static/css/main.b171b9c5.css",
+    "main.js": "/static/js/main.5b72fa44.js",
     "static/js/787.ea29de83.chunk.js": "/static/js/787.ea29de83.chunk.js",
+    "static/media/gen3.png": "/static/media/gen3.f43a65bf5ca7f8750d0a.png",
+    "static/media/MessinaSans-Bold.otf": "/static/media/MessinaSans-Bold.6faa92aea2c75baee587.otf",
+    "static/media/MessinaSans-Regular.otf": "/static/media/MessinaSans-Regular.e076faa103ea2e5dfab9.otf",
+    "static/media/MessinaSans-Light.otf": "/static/media/MessinaSans-Light.c4db26a16f0eaa0f808f.otf",
+    "static/media/gen4.webp": "/static/media/gen4.946ddaafaf2b51f0731d.webp",
     "static/media/placeholder.jpg": "/static/media/placeholder.8b2a13d4040c33e9e8cb.jpg",
     "index.html": "/index.html",
-    "main.b53df286.css.map": "/static/css/main.b53df286.css.map",
-    "main.1a152560.js.map": "/static/js/main.1a152560.js.map",
+    "static/media/getFetch.cjs": "/static/media/getFetch.c780682470504fffbd04.cjs",
+    "main.b171b9c5.css.map": "/static/css/main.b171b9c5.css.map",
+    "main.5b72fa44.js.map": "/static/js/main.5b72fa44.js.map",
     "787.ea29de83.chunk.js.map": "/static/js/787.ea29de83.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b53df286.css",
-    "static/js/main.1a152560.js"
+    "static/css/main.b171b9c5.css",
+    "static/js/main.5b72fa44.js"
   ]
 }

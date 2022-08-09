@@ -5,6 +5,10 @@ import {ExhibitionPage} from "./pages/exhibition.page";
 import {NavigationComponent} from "./components/navigation.component";
 import {Marquee} from "./components/marquee.component";
 import {AdminPage} from "./pages/admin.page";
+import {PiecePage} from "./pages/piece.page";
+import {ParticipantPage} from "./pages/participant.page";
+import {MethodologyPage} from "./pages/methodology.page";
+import {AbstractPage} from "./pages/abstract.page";
 
 function App() {
 
@@ -19,7 +23,11 @@ function App() {
                 <NavigationComponent/>
                 <Routes>
                     <Route path="/" element={<ExhibitionPage/>}/>
+                    <Route path="/piece/:tweet_id" element={<PiecePage />} />
+                    <Route path="/participant/:username" element={<ParticipantPage />} />
                     <Route path="/admin" element={<AdminPage/>} />
+                    <Route path="/methodology" element={<MethodologyPage />} />
+                    <Route path="/abstract" element={<AbstractPage />} />
                 </Routes>
             </BrowserRouter>
         </div>
