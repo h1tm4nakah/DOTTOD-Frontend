@@ -1,9 +1,9 @@
 {
   "SLOGAN": "galleria delle interpretazioni cibernetiche",
   "EXIBITION_DATES": "23 agosto 2022 - 23 settembre 2022",
-  "MENU_GALLERY": "__galleria",
-  "MENU_METHODOLOGY": "__metodologia",
-  "MENU_ABSTRACT": "__sinòssi",
+  "MENU_GALLERY": "galleria",
+  "MENU_METHODOLOGY": "metodologia",
+  "MENU_ABSTRACT": "sinòssi",
   "HEADER_GALLERY": "galleria",
   "HEADER_METHODOLOGY": "metodologia",
   "HEADER_ABSTRACT": "sinòssi",

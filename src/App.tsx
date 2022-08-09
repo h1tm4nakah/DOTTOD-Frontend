@@ -13,7 +13,7 @@ import {AbstractPage} from "./pages/abstract.page";
 function App() {
 
     useEffect(() => {
-        document.title = "Aequus Gallery"
+        document.title = "DOEST gallery"
     }, []);
 
   return (

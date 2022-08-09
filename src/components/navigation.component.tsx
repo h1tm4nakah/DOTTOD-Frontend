@@ -12,7 +12,9 @@ function NavLink({ children, to, ...props }: LinkProps) {
                   to={to}
                   {...props}
             >
+                { (!match ? "" : "{ ") }
                 {children}
+                { (!match ? "" : " }") }
             </Link>
         </div>
     );
@@ -24,7 +26,7 @@ export function NavigationComponent() {
     return (
         <header className="d-flex flex-wrap justify-content-sm-evenly justify-content-md-between flex-sm-row flex-column align-items-center py-3">
             <a href="/" className="text-dark text-decoration-none logo-margin">
-                <h1>Aequus</h1>
+                <h1>DOEST</h1>
             </a>
             <h3 className="text-center mb-0">
                 {t('SLOGAN')}
@@ -50,11 +52,18 @@ const LangSelector = () => {
     }
 
     return (
-        <span className="px-3">
-            &#123;&nbsp;
-             <span className={(selectedLang === 'it') ? "menu-link-active" : ""} onClick={() => changeLanguage('it')}>it</span>&nbsp; - &nbsp;
-             <span className={(selectedLang === 'en') ? "menu-link-active" : ""} onClick={() => changeLanguage('en')}>en</span>
-            &nbsp;&#125;
+        <span>
+            <span className="ps-3 pe-0">
+                 <a className={"menu-link" + (selectedLang === 'it' ? " menu-link-active" : "")} onClick={() => changeLanguage('it')}>
+                     { (selectedLang === 'it' ? "{ " : "") }it{ (selectedLang === 'it' ? " }" : "") }
+                 </a>
+            </span>
+            <span> &nbsp; | &nbsp; </span>
+            <span className="ps-0 pe-3">
+                 <a className={"menu-link" + (selectedLang === 'en' ? " menu-link-active" : "")} onClick={() => changeLanguage('en')}>
+                     { (selectedLang === 'en' ? "{ " : "") }en{ (selectedLang === 'en' ? " }" : "") }
+                 </a>
+            </span>
         </span>
     )
 }

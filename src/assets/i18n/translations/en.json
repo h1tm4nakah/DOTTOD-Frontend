@@ -1,9 +1,9 @@
 {
   "SLOGAN": "gallery of cybernetic interpretations",
   "EXIBITION_DATES": "august 23rd 2022 - september 23rd 2022",
-  "MENU_GALLERY": "__gallery",
-  "MENU_METHODOLOGY": "__methodology",
-  "MENU_ABSTRACT": "__abstract",
+  "MENU_GALLERY": "gallery",
+  "MENU_METHODOLOGY": "methodology",
+  "MENU_ABSTRACT": "abstract",
   "HEADER_GALLERY": "gallery",
   "HEADER_METHODOLOGY": "methodology",
   "HEADER_ABSTRACT": "abstract",
