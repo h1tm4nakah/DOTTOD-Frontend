@@ -1,9 +1,7 @@
 import React, {useContext, useEffect, useState} from "react";
-import {AuthContext} from "../services/auth.context";
 import {Link, useParams} from "react-router-dom";
 import {fetchPiece, Piece} from "../services/exhibiion.service";
 import {Loading} from "../components/loading.component";
-import placeholder from "../assets/images/placeholder.jpg";
 import {useTranslation} from "react-i18next";
 
 

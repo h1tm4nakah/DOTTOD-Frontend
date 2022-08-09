@@ -9,8 +9,12 @@ import {PiecePage} from "./pages/piece.page";
 import {ParticipantPage} from "./pages/participant.page";
 import {MethodologyPage} from "./pages/methodology.page";
 import {AbstractPage} from "./pages/abstract.page";
+import {Helmet} from "react-helmet";
+import ogimg from '../src/assets/images/gen3.png'
+import {useTranslation} from "react-i18next";
 
 function App() {
+    const { t } = useTranslation();
 
     useEffect(() => {
         document.title = "DOEST gallery"
@@ -18,6 +22,13 @@ function App() {
 
   return (
     <>
+        <Helmet>
+            <meta charSet="utf-8" />
+            <title>DOEST gallery</title>
+            <meta name="description" content={"DOES " + t('SLOGAN')} />
+            <meta property="og:title" content={"DOES " + t('SLOGAN')} />
+            <meta property="og:image" content={ogimg} />
+        </Helmet>
         <div className="container-fluid min-vh-100">
             <BrowserRouter>
                 <NavigationComponent/>
