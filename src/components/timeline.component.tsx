@@ -14,7 +14,7 @@ export function Timeline({in_participant}: {in_participant: Participant}) {
 
     return (
         <div className="row">
-            <div className="col-3 col-sm-2 col-md-1 col-xl-auto">
+            <div className="col-3 col-sm-2 col-md-1 col-xl-auto" style={{minWidth: "80px"}}>
                 <Link to={"/participant/" + participant.username} className="text-decoration-none" style={{color: "black"}}>
                     <div className="participant-username my-4 ms-3">
                         <h2 style={{margin: "0px"}}>{participant.username}</h2>
