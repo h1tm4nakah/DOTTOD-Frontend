@@ -50,6 +50,12 @@ export function PiecePage() {
                             {piece.tweet_id}
                         </a>
                     </p>
+                    <h5><b>{t('LINK_TO_TWEET_RESP')}:</b></h5>
+                    <p>
+                        <a className="text-decoration-none" href={"https://twitter.com/twitter/status/" + piece.tweet_response_id} target="_blank" rel="noreferrer">
+                            {piece.tweet_response_id}
+                        </a>
+                    </p>
                 </div>
             </div>
         </div>

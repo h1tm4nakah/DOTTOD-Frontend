@@ -36,6 +36,15 @@ a, p, small, .btn {
   font-weight: 600;
 }
 
+.menu-link:hover, .menu-link:active {
+  color: black;
+  text-decoration: none;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
 .marquee {
   margin: 0 auto;
   white-space: nowrap;
@@ -190,6 +199,10 @@ a, p, small, .btn {
 .piece-image {
   padding: 10px;
   border: 1px solid black;
+}
+
+.btn-delete {
+  cursor: pointer;
 }
 
 @media (min-width: 450px) {

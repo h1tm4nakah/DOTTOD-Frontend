@@ -71,6 +71,7 @@ export interface PieceAdmin {
     artifact_url_4: string,
     tweeted_at: string,
     tweet_id: string,
+    tweet_response_id: string,
     tweet_retweet_count: string,
     tweet_reply_count: string,
     tweet_like_count: string,
@@ -121,4 +122,19 @@ export const postGeneratedImages = (tweet_id: string, i1: string, i2: string, i3
 export const getParticipantsFilters = () => {
     // @ts-ignore
     return axios.get(API_URL + "participants", { headers: authHeader() });
+}
+
+export const getDashboardPieces = () => {
+    // @ts-ignore
+    return axios.get(API_URL + "dashboard/pieces", { headers: authHeader() });
+}
+
+export const deleteDashboardPieces = (piece: PieceAdmin) => {
+    // @ts-ignore
+    return axios.delete(API_URL + "dashboard/pieces/" + piece.tweet_id, { headers: authHeader() });
+}
+
+export const generateResponseDashboardPiece = (piece: PieceAdmin) => {
+    // @ts-ignore
+    return axios.post(API_URL + "dashboard/pieces/" + piece.tweet_id, {},{ headers: authHeader() });
 }

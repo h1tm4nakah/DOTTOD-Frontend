@@ -12,6 +12,7 @@ export interface Piece {
     artifact_url_4: string,
     tweeted_at: string,
     tweet_id: string,
+    tweet_response_id: string,
     participant?: Participant,
 }
 

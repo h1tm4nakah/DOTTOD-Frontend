@@ -6,6 +6,7 @@ import "react-datepicker/dist/react-datepicker.css";
 import {TranslateTwitterPage} from "../components/admin/translatetweets.component";
 import {GenerateImagesPage} from "../components/admin/generateimages.component";
 import {useNavigate} from "react-router-dom";
+import {DashboardAdminPage} from "../components/admin/dashboard.component";
 
 export function AdminPage() {
     // @ts-ignore
@@ -21,7 +22,7 @@ export function AdminPage() {
 function InnerAdminPage() {
     // @ts-ignore
     const { logout, isTokenValid } = useContext(AuthContext);
-    const [tab, setTab] = useState("fetch");
+    const [tab, setTab] = useState("dashboard");
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -41,6 +42,9 @@ function InnerAdminPage() {
                 <div className="col-12">
                     <ul className="nav nav-pills justify-content-center pb-3 border-bottom">
                         <li className="nav-item">
+                            <a className={"nav-link" + (tab === "dashboard" ? " active" : "")} href="#" onClick={() => setTab("dashboard")}>dashboard</a>
+                        </li>
+                        <li className="nav-item">
                             <a className={"nav-link" + (tab === "fetch" ? " active" : "")} href="#" onClick={() => setTab("fetch")}>fetch tweets</a>
                         </li>
                         <li className="nav-item">
@@ -55,6 +59,7 @@ function InnerAdminPage() {
                     </ul>
                 </div>
                 <div className="col-12 mt-4">
+                    { (tab === "dashboard") && <DashboardAdminPage /> }
                     { (tab === "fetch") && <GenerateTwitterPage /> }
                     { (tab === "translate") && <TranslateTwitterPage /> }
                     { (tab === "generate") && <GenerateImagesPage />}
