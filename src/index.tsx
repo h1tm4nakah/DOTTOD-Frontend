@@ -5,12 +5,16 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { ContextProvider} from "./services/auth.context";
-
+import ReactGA from "react-ga4";
 import './i18n';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
+
+ReactGA.initialize("G-3ZW69RYZS8");
+ReactGA.send("pageview");
+
 root.render(
   <React.StrictMode>
       <ContextProvider value={500}>

@@ -13,7 +13,7 @@ export function AbstractPage() {
                     </div>
                 </div>
                 <div className="col-12 col-md-8 mt-3 mt-md-0">
-                    <h3>{t('HEADER_ABSTRACT')}</h3>
+                    <h3><b>{t('HEADER_ABSTRACT')}</b></h3>
                     <p className="text-justify">{t('ABSTRACT_TEXT_1')}</p>
                     <p className="text-justify">{t('ABSTRACT_TEXT_2')}</p>
                 </div>
