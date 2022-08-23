@@ -3,6 +3,7 @@ import {Link, useParams} from "react-router-dom";
 import {fetchPiece, Piece} from "../services/exhibiion.service";
 import {Loading} from "../components/loading.component";
 import {useTranslation} from "react-i18next";
+import placeholder from "../assets/images/placeholder.jpg";
 
 
 export function PiecePage() {
@@ -35,7 +36,12 @@ export function PiecePage() {
                 </div>
                 <div className="col-12 col-md-5">
                     <div className="piece-image">
-                        <img src={piece.artifact_url_1} className="img-fluid" />
+                        {
+                            piece.artifact_url_1 === null ? (<img alt="placeholder" className="img-fluid" src={placeholder} />) :
+                                (
+                                    <img alt={piece.input_translated} className="img-fluid" src={piece.artifact_url_1} />
+                                )
+                        }
                     </div>
                     <p>{piece.tweeted_at}</p>
                 </div>

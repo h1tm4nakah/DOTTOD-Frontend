@@ -26,6 +26,7 @@ function App() {
             <meta charSet="utf-8" />
             <title>DOEST gallery</title>
             <meta name="description" content={"DOES " + t('SLOGAN')} />
+            <meta name="og:description" content={"DOES " + t('SLOGAN')} />
             <meta property="og:title" content={"DOES " + t('SLOGAN')} />
             <meta property="og:image" content={ogimg} />
         </Helmet>
