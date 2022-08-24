@@ -41,12 +41,15 @@ export function InfoOverlay() {
                         <div className="row">
                             <div className="col-12 col-md-8 text-center text-md-start">
                                 <h3>{t('WELCOME')}</h3>
+                                <button className="btn btn-sm btn-dark d-sm-none mb-3 mt-2" onClick={dismissModal}>{t('BTN_ENTER')}</button>
                             </div>
                             <div className="col-12 col-lg-8 mb-3 mb-lg-0">
                                 <p className="text-justify">{t('ABSTRACT_TEXT_2')}</p>
                                 <p className="text-justify d-none d-md-block">{t('ABSTRACT_TEXT_3')}</p>
                                 <p className="text-justify"><small><b>{t('ABSTRACT_TEXT_EXPL')}</b></small></p>
-                                <button className="btn btn-sm btn-dark" onClick={dismissModal}>{t('BTN_ENTER')}</button>
+                                <div className="text-center text-md-start mb-5">
+                                    <button className="btn btn-sm btn-dark" onClick={dismissModal}>{t('BTN_ENTER')}</button>
+                                </div>
                             </div>
                             <div className="col-12 col-lg-4 d-none d-md-block">
                                 <div className="piece-image">

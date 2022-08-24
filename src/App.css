@@ -41,10 +41,6 @@ a, p, small, .btn {
   text-decoration: none;
 }
 
-.text-justify {
-  text-align: justify;
-}
-
 .marquee {
   margin: 0 auto;
   white-space: nowrap;
@@ -210,7 +206,9 @@ a, p, small, .btn {
 }
 
 @media (min-width: 768px) {
-
+  .text-justify {
+    text-align: justify;
+  }
 }
 
 @media (min-width: 992px) {

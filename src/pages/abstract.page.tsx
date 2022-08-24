@@ -15,6 +15,7 @@ export function AbstractPage() {
                     <div className="piece-image">
                         <img src={image} className="img-fluid" />
                     </div>
+                    <small><b>prompt:</b> high quality photo of a computer projecting an image on space </small>
                 </div>
                 <div className="col-12 col-md-8 mt-3 mt-md-0">
                     <h3><b>{t('HEADER_ABSTRACT')}</b></h3>

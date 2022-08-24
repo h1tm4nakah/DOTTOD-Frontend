@@ -13,7 +13,7 @@ import {Helmet} from "react-helmet";
 import ogimg from '../src/assets/images/gen3.png'
 import {useTranslation} from "react-i18next";
 import {InfoOverlay} from "./components/infoOverlay.component";
-import {CreditsPage} from "./pages/credits.page";
+import {ContactsPage} from "./pages/contacts.page";
 
 function App() {
     const { t } = useTranslation();
@@ -56,7 +56,7 @@ function App() {
                     <Route path="/admin" element={<AdminPage/>} />
                     <Route path="/methodology" element={<MethodologyPage />} />
                     <Route path="/abstract" element={<AbstractPage />} />
-                    <Route path="/contacts" element={<CreditsPage />} />
+                    <Route path="/contacts" element={<ContactsPage />} />
                 </Routes>
             </BrowserRouter>
         </div>
