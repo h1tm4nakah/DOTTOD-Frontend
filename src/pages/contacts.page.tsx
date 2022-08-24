@@ -2,6 +2,7 @@ import {useTranslation} from "react-i18next";
 import image from "../assets/images/gen8.png";
 import React from "react";
 import {Helmet} from "react-helmet";
+import {ZoomableImage} from "../components/ZoomableImage.component";
 
 export function ContactsPage() {
     const { t } = useTranslation();
@@ -14,7 +15,7 @@ export function ContactsPage() {
             <div className="row mt-5">
                 <div className="col-12 col-md-4">
                     <div className="piece-image">
-                        <img alt="an old typewriter on a fur pink rug" src={image} className="img-fluid" />
+                        <ZoomableImage alt="an old typewriter on a fur pink rug" src={image} />
                     </div>
                     <small><b>prompt:</b> an old typewriter on a fur pink rug</small>
                 </div>

@@ -2,6 +2,7 @@ import React, {useContext, useEffect, useState} from "react";
 import {useTranslation} from "react-i18next";
 import image from "../assets/images/gen9.png"
 import {Helmet} from "react-helmet";
+import {ZoomableImage} from "../components/ZoomableImage.component";
 
 export function MethodologyPage() {
     const { t } = useTranslation();
@@ -13,7 +14,7 @@ export function MethodologyPage() {
             <div className="row mt-5">
                 <div className="col-12 col-md-4">
                     <div className="piece-image">
-                        <img src={image} className="img-fluid" />
+                        <ZoomableImage alt="a room full of neons with a scientist sitting in the middle" src={image} />
                     </div>
                     <small><b>prompt:</b> a room full of neons with a scientist sitting in the middle</small>
                 </div>

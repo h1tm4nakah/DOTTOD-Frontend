@@ -2,6 +2,7 @@ import * as React from 'react';
 import {Piece} from "../services/exhibiion.service";
 import {useEffect, useState} from "react";
 import placeholder from "../assets/images/placeholder.jpg"
+import placeholderWhite from "../assets/images/placeholderWhite.jpg"
 import {Link} from "react-router-dom";
 import {useTranslation} from "react-i18next";
 
@@ -17,7 +18,7 @@ export function PieceComponent({in_piece}: {in_piece: Piece}) {
     }, [in_piece])
 
     return (
-        <div className="col-xl-2 col-lg-3 col-sm-6 col-12" style={{verticalAlign: "top"}}>
+        <div className="col-xl-2 col-lg-3 col-sm-6 col-12 position-relative" style={{verticalAlign: "top"}}>
             <div onMouseLeave={() => setFliped(false)}>
                 <div className={(flipped ? "d-none" : "d-block")}>
                     {
@@ -37,10 +38,13 @@ export function PieceComponent({in_piece}: {in_piece: Piece}) {
                         </a>
                     </div>
                 </div>
-                <div className={flipped ? "d-block" : "d-none"}>
-                    <p className="piece-description"><small><b>{t('ORIGINAL_TEXT')}:</b><br />{piece.input_original}</small></p>
-                    <p className="piece-description"><small><b>{t('TRANSLATED_TEXT')}:</b><br />{piece.input_translated}</small></p>
-                    <Link to={"/piece/" + piece.tweet_id} className="mt-4 btn btn-sm btn-dark">{t('BTN_SHOW')}</Link>
+                <div className={(flipped ? "d-block" : "d-none")}>
+                    <img alt="placeholder" className="img-fluid" src={placeholderWhite} />
+                    <div className="position-absolute top-0 start-0 px-2">
+                        <p className="piece-description"><small><b>{t('ORIGINAL_TEXT')}:</b><br />{piece.input_original}</small></p>
+                        <p className="piece-description"><small><b>{t('TRANSLATED_TEXT')}:</b><br />{piece.input_translated}</small></p>
+                        <Link to={"/piece/" + piece.tweet_id} className="mt-4 btn btn-sm btn-dark">{t('BTN_SHOW')}</Link>
+                    </div>
                 </div>
             </div>
         </div>

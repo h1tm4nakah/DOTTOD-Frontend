@@ -2,6 +2,7 @@ import {useTranslation} from "react-i18next";
 import image from "../assets/images/gen6.png";
 import {Helmet} from "react-helmet";
 import React from "react";
+import {ZoomableImage} from "../components/ZoomableImage.component";
 
 export function AbstractPage() {
     const { t } = useTranslation();
@@ -13,9 +14,9 @@ export function AbstractPage() {
             <div className="row mt-5">
                 <div className="col-12 col-md-4">
                     <div className="piece-image">
-                        <img src={image} className="img-fluid" />
+                        <ZoomableImage alt="high quality photo of a computer projecting an image on space" src={image} />
                     </div>
-                    <small><b>prompt:</b> high quality photo of a computer projecting an image on space </small>
+                    <small><b>prompt:</b> high quality photo of a computer projecting an image on space</small>
                 </div>
                 <div className="col-12 col-md-8 mt-3 mt-md-0">
                     <h3><b>{t('HEADER_ABSTRACT')}</b></h3>

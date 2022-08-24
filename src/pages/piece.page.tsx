@@ -5,6 +5,8 @@ import {Loading} from "../components/loading.component";
 import {useTranslation} from "react-i18next";
 import placeholder from "../assets/images/placeholder.jpg";
 import {Helmet} from "react-helmet";
+import image from "../assets/images/gen6.png";
+import {ZoomableImage} from "../components/ZoomableImage.component";
 
 
 export function PiecePage() {
@@ -44,7 +46,7 @@ export function PiecePage() {
                         {
                             piece.artifact_url_1 === null ? (<img alt="placeholder" className="img-fluid" src={placeholder} />) :
                                 (
-                                    <img alt={piece.input_translated} className="img-fluid" src={piece.artifact_url_1} />
+                                    <ZoomableImage alt={piece.input_translated} src={piece.artifact_url_1} />
                                 )
                         }
                     </div>
