@@ -23,7 +23,8 @@ export function ZoomableImage({src, alt}: {src: string, alt?: string}) {
         <>
             <img className="img-fluid" alt={alt} src={src} onClick={() => setOpen(true)} style={{cursor: "pointer"}}/>
             { open && (
-                <div className="container-fluid position-absolute start-0 top-0 p-5" style={{zIndex: "99999"}}>
+                <div className="container-fluid position-absolute start-0 top-0 p-5" style={{zIndex: "99999", backgroundColor: "rgb(255 255 255 / 90%)", height: "100%"}}  >
+                    <button type="button" className="btn-close position-absolute end-0 top-0 m-4" aria-label="Close" onClick={() => setOpen(false)}></button>
                     <div className="container text-center">
                         <img className="img-fluid" alt={alt} style={{maxHeight: "90vh"}} src={src} ref={ref}/>
                     </div>
