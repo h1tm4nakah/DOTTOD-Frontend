@@ -34,15 +34,16 @@ export function NavigationComponent() {
             </h3>
             <div className="d-flex flex-wrap justify-content-sm-evenly justify-content-between mt-sm-1 mt-3">
                 <span className="px-3"><NavLink to={"/"}>{t('MENU_GALLERY')}</NavLink></span>
-                <span className="px-3"><NavLink to={"/methodology"}>{t('MENU_METHODOLOGY')}</NavLink></span>
                 <span className="px-3"><NavLink to={"/abstract"}>{t('MENU_ABSTRACT')}</NavLink></span>
+                <span className="px-3"><NavLink to={"/methodology"}>{t('MENU_METHODOLOGY')}</NavLink></span>
+                <span className="px-3"><NavLink to={"/contacts"}>{t('MENU_CONTACTS')}</NavLink></span>
                 <LangSelector />
             </div>
         </header>
     );
 }
 
-const LangSelector = () => {
+export const LangSelector = () => {
     const { i18n } = useTranslation();
     const [selectedLang, setSelectedLang] = useState('it');
 
@@ -52,7 +53,7 @@ const LangSelector = () => {
     }
 
     return (
-        <span>
+        <span className="mt-3 mt-md-0">
             <span className="ps-3 pe-0">
                  <a className={"menu-link" + (selectedLang === 'it' ? " menu-link-active" : "")} onClick={() => changeLanguage('it')}>
                      { (selectedLang === 'it' ? "{ " : "") }it{ (selectedLang === 'it' ? " }" : "") }

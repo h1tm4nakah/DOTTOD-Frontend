@@ -12,6 +12,8 @@ import {AbstractPage} from "./pages/abstract.page";
 import {Helmet} from "react-helmet";
 import ogimg from '../src/assets/images/gen3.png'
 import {useTranslation} from "react-i18next";
+import {InfoOverlay} from "./components/infoOverlay.component";
+import {CreditsPage} from "./pages/credits.page";
 
 function App() {
     const { t } = useTranslation();
@@ -44,6 +46,7 @@ function App() {
             <meta name="google-site-verification" content="ZbNLEcFdJFKVhONaa9FNQDfzMBgsHUaFbHQ4tOkBjF0" />
         </Helmet>
         <div className="container-fluid min-vh-100">
+            <InfoOverlay />
             <BrowserRouter>
                 <NavigationComponent/>
                 <Routes>
@@ -53,6 +56,7 @@ function App() {
                     <Route path="/admin" element={<AdminPage/>} />
                     <Route path="/methodology" element={<MethodologyPage />} />
                     <Route path="/abstract" element={<AbstractPage />} />
+                    <Route path="/contacts" element={<CreditsPage />} />
                 </Routes>
             </BrowserRouter>
         </div>
