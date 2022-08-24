@@ -3,6 +3,7 @@ import {Link, useParams} from "react-router-dom";
 import {fetchParticipant, fetchPiece, Participant, Piece} from "../services/exhibiion.service";
 import {Loading} from "../components/loading.component";
 import {date2Human} from "../components/piece.component";
+import {Helmet} from "react-helmet";
 
 
 export function ParticipantPage() {
@@ -24,6 +25,10 @@ export function ParticipantPage() {
     if (loading) return <Loading/>
 
     return (
+        <>
+            <Helmet>
+                <title>{ "DOEST gallery - " + (username) }</title>
+            </Helmet>
         <div className="container">
             <div className="row mt-5">
                 <div className="col-12">
@@ -59,6 +64,7 @@ export function ParticipantPage() {
                 </div>
             </div>
         </div>
+        </>
     )
 
 }

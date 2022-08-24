@@ -4,6 +4,7 @@ import {fetchPiece, Piece} from "../services/exhibiion.service";
 import {Loading} from "../components/loading.component";
 import {useTranslation} from "react-i18next";
 import placeholder from "../assets/images/placeholder.jpg";
+import {Helmet} from "react-helmet";
 
 
 export function PiecePage() {
@@ -26,6 +27,10 @@ export function PiecePage() {
     if (loading) return <Loading/>
 
     return (
+        <>
+        <Helmet>
+            <title>{ "DOEST gallery - " + (tweet_id) }</title>
+        </Helmet>
         <div className="container">
             <div className="row mt-5">
                 <div className="col-12">
@@ -65,6 +70,7 @@ export function PiecePage() {
                 </div>
             </div>
         </div>
+        </>
     )
 
 }
