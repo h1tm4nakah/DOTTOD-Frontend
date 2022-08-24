@@ -24,7 +24,7 @@ export function PieceComponent({in_piece}: {in_piece: Piece}) {
                     {
                         piece.artifact_url_1 === null ? (<img alt="placeholder" className="img-fluid" src={placeholder} onMouseEnter={() => setFliped(true)}/>) :
                             (
-                                <img alt={piece.input_translated} className="img-fluid" src={piece.artifact_url_1} onMouseEnter={() => setFliped(true)}/>
+                                <img alt={piece.input_translated} className="img-fluid" src={(piece.artifact_url_1) + "/-/format/jpeg/"} onMouseEnter={() => setFliped(true)}/>
                             )
                     }
                     <div className="d-flex justify-content-between">

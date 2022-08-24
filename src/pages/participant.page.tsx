@@ -43,7 +43,7 @@ export function ParticipantPage() {
                                 <>
                                 <div key={p.slug} className="col-12 col-md-4 col-lg-3">
                                     <Link to={"/piece/" + p.tweet_id}>
-                                        <img src={p.artifact_url_1} className="img-fluid"/>
+                                        <img src={(p.artifact_url_1) + "/-/format/jpeg/"} className="img-fluid"/>
                                     </Link>
                                     <div className="d-flex justify-content-between">
                                         <p><small>{date2Human(p.tweeted_at)}</small></p>

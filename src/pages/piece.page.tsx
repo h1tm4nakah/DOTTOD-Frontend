@@ -46,7 +46,7 @@ export function PiecePage() {
                         {
                             piece.artifact_url_1 === null ? (<img alt="placeholder" className="img-fluid" src={placeholder} />) :
                                 (
-                                    <ZoomableImage alt={piece.input_translated} src={piece.artifact_url_1} />
+                                    <ZoomableImage alt={piece.input_translated} src={(piece.artifact_url_1) + "/-/format/jpeg/"} />
                                 )
                         }
                     </div>
