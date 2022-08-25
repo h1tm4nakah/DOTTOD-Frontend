@@ -22,6 +22,7 @@ export function PiecePage() {
         }).catch(err => {
             console.log(err);
         }).finally(() => {
+            document.title = "DOEST gallery - " + (tweet_id);
             setloading(false);
         });
     }, [tweet_id]);
@@ -30,9 +31,6 @@ export function PiecePage() {
 
     return (
         <>
-        <Helmet>
-            <title>{ "DOEST gallery - " + (tweet_id) }</title>
-        </Helmet>
         <div className="container">
             <div className="row mt-5">
                 <div className="col-12">

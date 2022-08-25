@@ -1,16 +1,15 @@
 import React, {useContext, useEffect, useState} from "react";
 import {useTranslation} from "react-i18next";
 import image from "../assets/images/gen9.png"
-import {Helmet} from "react-helmet";
 import {ZoomableImage} from "../components/ZoomableImage.component";
 
 export function MethodologyPage() {
+    useEffect(() => {
+        document.title = "DOEST gallery - methodology";
+    }, [])
     const { t } = useTranslation();
     return (
         <div className="container">
-            <Helmet>
-                <title>{ "DOEST gallery - methodology" }</title>
-            </Helmet>
             <div className="row mt-5">
                 <div className="col-12 col-md-4">
                     <div className="piece-image">

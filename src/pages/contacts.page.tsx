@@ -1,17 +1,16 @@
 import {useTranslation} from "react-i18next";
 import image from "../assets/images/gen8.png";
-import React from "react";
-import {Helmet} from "react-helmet";
+import React, {useEffect} from "react";
 import {ZoomableImage} from "../components/ZoomableImage.component";
 
 export function ContactsPage() {
+    useEffect(() => {
+        document.title = "DOEST gallery - contacts";
+    }, [])
     const { t } = useTranslation();
 
     return (
         <div className="container" style={{backgroundColor: "white"}}>
-            <Helmet>
-                <title>{ "DOEST gallery - contacts" }</title>
-            </Helmet>
             <div className="row mt-5">
                 <div className="col-12 col-md-4">
                     <div className="piece-image">

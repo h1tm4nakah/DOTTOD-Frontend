@@ -1,16 +1,16 @@
 import {useTranslation} from "react-i18next";
 import image from "../assets/images/gen6.png";
-import {Helmet} from "react-helmet";
-import React from "react";
+import React, {useEffect} from "react";
 import {ZoomableImage} from "../components/ZoomableImage.component";
 
 export function AbstractPage() {
+    useEffect(() => {
+        document.title = "DOEST gallery - abstract";
+    }, [])
+
     const { t } = useTranslation();
     return (
         <div className="container" style={{backgroundColor: "white"}}>
-            <Helmet>
-                <title>{ "DOEST gallery - abstract" }</title>
-            </Helmet>
             <div className="row mt-5">
                 <div className="col-12 col-md-4">
                     <div className="piece-image">
