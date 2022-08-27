@@ -1,11 +1,9 @@
-import React, {useContext, useEffect, useState} from "react";
+import React, {useEffect, useState} from "react";
 import {Link, useParams} from "react-router-dom";
 import {fetchPiece, Piece} from "../services/exhibiion.service";
 import {Loading} from "../components/loading.component";
 import {useTranslation} from "react-i18next";
 import placeholder from "../assets/images/placeholder.jpg";
-import {Helmet} from "react-helmet";
-import image from "../assets/images/gen6.png";
 import {ZoomableImage} from "../components/ZoomableImage.component";
 
 
