@@ -8,7 +8,7 @@ import {useTranslation} from "react-i18next";
 
 
 // @ts-ignore
-export function PieceComponent({in_piece}: {in_piece: Piece}) {
+export function PieceComponent({id, in_piece, flip}: {id: string, in_piece: Piece, flip: boolean}) {
     const [piece, setPiece] = useState<Piece>(in_piece)
     const [flipped, setFliped] = useState(false)
     const { t } = useTranslation();
@@ -17,8 +17,12 @@ export function PieceComponent({in_piece}: {in_piece: Piece}) {
         setPiece(in_piece)
     }, [in_piece])
 
+    useEffect(() => {
+        setFliped(flip);
+    }, [flip])
+
     return (
-        <div className="col-xl-2 col-lg-3 col-sm-6 col-12 position-relative" style={{verticalAlign: "top"}}>
+        <div id={id} className="col-xl-2 col-lg-3 col-sm-6 col-12 position-relative" style={{verticalAlign: "top"}}>
             <div onMouseLeave={() => setFliped(false)}>
                 <div className={(flipped ? "d-none" : "d-block")}>
                     {
@@ -39,6 +43,7 @@ export function PieceComponent({in_piece}: {in_piece: Piece}) {
                     </div>
                 </div>
                 <div className={(flipped ? "d-block" : "d-none")}>
+                    <button type="button" className="btn-close position-absolute end-0 bottom-0 m-4 d-block d-md-none" aria-label="Close" onClick={() => setFliped(false)}></button>
                     <img alt="placeholder" className="img-fluid" src={placeholderWhite} />
                     <div className="position-absolute top-0 start-0 px-2">
                         <p className="piece-description"><small><b>{t('ORIGINAL_TEXT')}:</b><br />{piece.input_original}</small></p>

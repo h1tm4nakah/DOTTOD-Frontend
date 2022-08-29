@@ -27,7 +27,8 @@ export function ContactsPage() {
                         <b>Concept and implementation:</b><br/>
                         Pietro -&nbsp;
                         <a className="text-decoration-none" href="https://www.linkedin.com/in/prustici/" target="_blank" rel="noreferrer">linkedin</a> -&nbsp;
-                        <a className="text-decoration-none" href="https://www.instagram.com/piehtm/" target="_blank" rel="noreferrer">instagram</a>
+                        <a className="text-decoration-none" href="https://www.instagram.com/piehtm/" target="_blank" rel="noreferrer">instagram</a> -&nbsp;
+                        <a className="text-decoration-none disabled" href="https://github.com/h1tm4nakah" target="_blank" rel="noreferrer">github</a>
                     </p>
                     <p className="mb-1">
                         <b>UX/UI Design:</b><br/>
@@ -44,8 +45,8 @@ export function ContactsPage() {
                     <p className="mb-1">
                         <b>Knowledge and access to AI tools:</b><br/>
                         Chris -&nbsp;
-                        <a className="text-decoration-none disabled" href="#" target="_blank" rel="noreferrer">linkedin</a> -&nbsp;
-                        <a className="text-decoration-none disabled" href="#" target="_blank" rel="noreferrer">instagram</a>
+                        <a className="text-decoration-none disabled" href="https://www.linkedin.com/in/christian-m-ernst/" target="_blank" rel="noreferrer">linkedin</a> -&nbsp;
+                        <a className="text-decoration-none disabled" href="https://github.com/chris-ernst" target="_blank" rel="noreferrer">github</a>
                     </p>
                 </div>
             </div>

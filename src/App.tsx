@@ -12,6 +12,7 @@ import {AbstractPage} from "./pages/abstract.page";
 import {useTranslation} from "react-i18next";
 import {InfoOverlay} from "./components/infoOverlay.component";
 import {ContactsPage} from "./pages/contacts.page";
+import {MobileUI} from "./components/mobileUI.component";
 
 function App() {
     const { t } = useTranslation();
