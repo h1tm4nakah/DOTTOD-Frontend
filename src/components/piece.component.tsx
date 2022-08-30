@@ -5,6 +5,7 @@ import placeholder from "../assets/images/placeholder.jpg"
 import placeholderWhite from "../assets/images/placeholderWhite.jpg"
 import {Link} from "react-router-dom";
 import {useTranslation} from "react-i18next";
+import {ImageRenderer} from "./ImageRenderer.component";
 
 
 // @ts-ignore
@@ -28,7 +29,13 @@ export function PieceComponent({id, in_piece, flip}: {id: string, in_piece: Piec
                     {
                         piece.artifact_url_1 === null ? (<img alt="placeholder" className="img-fluid" src={placeholder} onMouseEnter={() => setFliped(true)}/>) :
                             (
-                                <img alt={piece.input_translated} className="img-fluid" src={(piece.artifact_url_1) + "/-/format/jpeg/"} onMouseEnter={() => setFliped(true)}/>
+                                //<img alt={piece.input_translated} className="img-fluid" src={(piece.artifact_url_1) + "/-/format/jpeg/"} onMouseEnter={() => setFliped(true)}/>
+                                <ImageRenderer
+                                    placeholderImg={placeholder}
+                                    src={(piece.artifact_url_1) + "/-/format/jpeg/"}
+                                    alt="placeholder" className="img-fluid"
+                                    onMouseEnter={() => setFliped(true)}
+                                />
                             )
                     }
                     <div className="d-flex justify-content-between">
