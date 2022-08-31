@@ -18,7 +18,7 @@ function App() {
     const { t } = useTranslation();
 
     useEffect(() => {
-        document.title = "DOEST gallery"
+        document.title = "DOTTOD gallery"
     }, []);
 
   return (

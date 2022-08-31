@@ -20,7 +20,7 @@ export function PiecePage() {
         }).catch(err => {
             console.log(err);
         }).finally(() => {
-            document.title = "DOEST gallery - " + (tweet_id);
+            document.title = "DOTTOD gallery - " + (tweet_id);
             setloading(false);
         });
     }, [tweet_id]);

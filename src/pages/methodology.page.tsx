@@ -5,7 +5,7 @@ import {ZoomableImage} from "../components/ZoomableImage.component";
 
 export function MethodologyPage() {
     useEffect(() => {
-        document.title = "DOEST gallery - methodology";
+        document.title = "DOTTOD gallery - methodology";
     }, [])
     const { t } = useTranslation();
     return (

@@ -5,7 +5,7 @@ import {ZoomableImage} from "../components/ZoomableImage.component";
 
 export function AbstractPage() {
     useEffect(() => {
-        document.title = "DOEST gallery - abstract";
+        document.title = "DOTTOD gallery - abstract";
     }, [])
 
     const { t } = useTranslation();

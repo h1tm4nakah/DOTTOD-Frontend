@@ -26,7 +26,7 @@ export function NavigationComponent() {
     return (
         <header className="d-flex flex-wrap justify-content-sm-evenly justify-content-md-between flex-sm-row flex-column align-items-center py-3">
             <a href="/" className="text-dark text-decoration-none logo-margin">
-                <h1>DOEST</h1>
+                <h1>DOTTOD</h1>
             </a>
             <h3 className="text-center mb-0">
                 {t('SLOGAN')}

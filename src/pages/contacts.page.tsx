@@ -5,7 +5,7 @@ import {ZoomableImage} from "../components/ZoomableImage.component";
 
 export function ContactsPage() {
     useEffect(() => {
-        document.title = "DOEST gallery - contacts";
+        document.title = "DOTTOD gallery - contacts";
     }, [])
     const { t } = useTranslation();
 
@@ -20,8 +20,8 @@ export function ContactsPage() {
                 </div>
                 <div className="col-12 col-md-8 mt-3 mt-md-0">
                     <h3><b>{t('HEADER_CONTACTS')}</b></h3>
-                    <p className="mb-1"><b>Email</b> - <a className="text-decoration-none" href="mailto:info@doest-work.com" target="_blank" rel="noreferrer">info@doest-work.com</a></p>
-                    <p className="mb-1"><b>Twitter</b> - <a className="text-decoration-none" href="https://twitter.com/DOEST_gallery" target="_blank" rel="noreferrer">@DOEST_gallery</a></p>
+                    <p className="mb-1"><b>Email</b> - <a className="text-decoration-none" href="mailto:info@dottod.net" target="_blank" rel="noreferrer">info@dottod.net</a></p>
+                    <p className="mb-1"><b>Twitter</b> - <a className="text-decoration-none" href="https://twitter.com/DOTTOD_gallery" target="_blank" rel="noreferrer">@DOTTOD_gallery</a></p>
                     <h3 className="mt-3"><b>{t('HEADER_ROLES')}</b></h3>
                     <p className="mb-1">
                         <b>Concept and implementation:</b><br/>

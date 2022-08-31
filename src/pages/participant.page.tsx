@@ -27,7 +27,7 @@ export function ParticipantPage() {
     return (
         <>
             <Helmet>
-                <title>{ "DOEST gallery - " + (username) }</title>
+                <title>{ "DOTTOD gallery - " + (username) }</title>
             </Helmet>
         <div className="container">
             <div className="row mt-5">
