@@ -9,21 +9,23 @@ export function Timeline({in_participant, flip, focusIDX}: {in_participant: Part
     const [participant, setParticipant] = useState<Participant>(in_participant);
 
     useEffect(() => {
-        setParticipant(in_participant)
+        setParticipant(in_participant);
     }, [in_participant])
 
     useEffect(() => {
-        const timelineWrapper = document.getElementById("part-" + participant.username);
-        const targetPiece = document.getElementById("piece-" + participant.username + '-' + focusIDX);
-        if (timelineWrapper && targetPiece) {
-            const scrollAmount = targetPiece.offsetLeft - ( targetPiece.offsetWidth / 3 );
-            timelineWrapper.scroll({
-                left: scrollAmount,
-                top: 0,
-                behavior: 'smooth'
-            })
+        const { innerWidth: width, innerHeight: height } = window;
+        if (width < 600) {
+            const timelineWrapper = document.getElementById("part-" + participant.username);
+            const targetPiece = document.getElementById("piece-" + participant.username + '-' + focusIDX);
+            if (timelineWrapper && targetPiece) {
+                const scrollAmount = targetPiece.offsetLeft - ( targetPiece.offsetWidth / 3 );
+                timelineWrapper.scroll({
+                    left: scrollAmount,
+                    top: 0,
+                    behavior: 'smooth'
+                })
+            }
         }
-
     }, [focusIDX])
 
     return (

@@ -25,7 +25,6 @@ export function ExhibitionPage() {
         if (focusIDX === 0 && value < 0) return;
         if (focusIDX === (focusIDXMax-1) && value > 0) return;
         setFocusIDX(focusIDX + value);
-        console.log(focusIDX + value);
     }
 
     if (loading) {
