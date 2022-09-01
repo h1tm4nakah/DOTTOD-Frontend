@@ -17,7 +17,7 @@ export function ContactsPage() {
                         <ZoomableImage alt="an old typewriter on a fur pink rug" src={image} />
                     </div>
                     <p className="piece-description">
-                        <small><b>prompt:</b> charles and ray eames speclating about the future of design in their living room in front of a fireplace in 1950</small>
+                        <small><b>prompt:</b> charles and ray eames speculating about the future of design in their living room in front of a fireplace in 1950</small>
                     </p>
                 </div>
                 <div className="col-12 col-md-8 mt-3 mt-md-0">
