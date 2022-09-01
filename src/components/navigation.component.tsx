@@ -22,11 +22,19 @@ function NavLink({ children, to, ...props }: LinkProps) {
 
 export function NavigationComponent() {
     const { t } = useTranslation();
+    const [DFlip, setDFlip] = useState(true);
 
     return (
         <header className="d-flex flex-wrap justify-content-sm-evenly justify-content-md-between flex-sm-row flex-column align-items-center py-3">
             <a href="/" className="text-dark text-decoration-none logo-margin">
-                <h1>DOTTOD</h1>
+                <div
+                    className="d-flex justify-content-center"
+                    onMouseEnter={() => setDFlip(false)}
+                    onMouseLeave={() => setDFlip(true)}
+                >
+                    <h1 style={{display: "block"}}>DOT</h1>
+                    <h1 style={{display: "block"}} className={(DFlip ? "text-h-flip" : "")}>DOT</h1>
+                </div>
             </a>
             <h3 className="text-center mb-0">
                 {t('SLOGAN')}
