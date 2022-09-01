@@ -1,24 +1,24 @@
 {
   "files": {
     "main.css": "/static/css/main.1dc14352.css",
-    "main.js": "/static/js/main.b5b2059a.js",
+    "main.js": "/static/js/main.fd51e6b9.js",
     "static/js/787.ea29de83.chunk.js": "/static/js/787.ea29de83.chunk.js",
-    "static/media/gen8.png": "/static/media/gen8.f2341d115b46608cd0f1.png",
-    "static/media/gen9.png": "/static/media/gen9.8674ea733196f54fa707.png",
-    "static/media/gen6.png": "/static/media/gen6.9d85bd98d12c403c738b.png",
     "static/media/MessinaSans-Bold.otf": "/static/media/MessinaSans-Bold.6faa92aea2c75baee587.otf",
     "static/media/MessinaSans-Regular.otf": "/static/media/MessinaSans-Regular.e076faa103ea2e5dfab9.otf",
     "static/media/MessinaSans-Light.otf": "/static/media/MessinaSans-Light.c4db26a16f0eaa0f808f.otf",
+    "static/media/gen9.jpg": "/static/media/gen9.328b1da9f6f3937b331f.jpg",
+    "static/media/gen6.jpg": "/static/media/gen6.bcfbf094fd6fb018c809.jpg",
+    "static/media/gen8.jpg": "/static/media/gen8.42f052b1e18d9dbba0f3.jpg",
     "static/media/placeholderWhite.jpg": "/static/media/placeholderWhite.3cfa8f762d8eb8feabfc.jpg",
     "static/media/placeholder.jpg": "/static/media/placeholder.3eadd1f4265629495c78.jpg",
     "index.html": "/index.html",
     "static/media/getFetch.cjs": "/static/media/getFetch.c780682470504fffbd04.cjs",
     "main.1dc14352.css.map": "/static/css/main.1dc14352.css.map",
-    "main.b5b2059a.js.map": "/static/js/main.b5b2059a.js.map",
+    "main.fd51e6b9.js.map": "/static/js/main.fd51e6b9.js.map",
     "787.ea29de83.chunk.js.map": "/static/js/787.ea29de83.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1dc14352.css",
-    "static/js/main.b5b2059a.js"
+    "static/js/main.fd51e6b9.js"
   ]
 }

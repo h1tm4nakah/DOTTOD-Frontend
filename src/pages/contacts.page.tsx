@@ -1,5 +1,5 @@
 import {useTranslation} from "react-i18next";
-import image from "../assets/images/gen8.png";
+import image from "../assets/images/gen8.jpg";
 import React, {useEffect} from "react";
 import {ZoomableImage} from "../components/ZoomableImage.component";
 
@@ -16,7 +16,9 @@ export function ContactsPage() {
                     <div className="piece-image">
                         <ZoomableImage alt="an old typewriter on a fur pink rug" src={image} />
                     </div>
-                    <small><b>prompt:</b> an old typewriter on a fur pink rug</small>
+                    <p className="piece-description">
+                        <small><b>prompt:</b> charles and ray eames speclating about the future of design in their living room in front of a fireplace in 1950</small>
+                    </p>
                 </div>
                 <div className="col-12 col-md-8 mt-3 mt-md-0">
                     <h3><b>{t('HEADER_CONTACTS')}</b></h3>

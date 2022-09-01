@@ -1,6 +1,6 @@
 import * as React from 'react';
 import {useEffect, useRef, useState} from "react";
-import image from "../assets/images/gen6.png";
+import image from "../assets/images/gen6.jpg";
 import {useTranslation} from "react-i18next";
 import {LangSelector} from "./navigation.component";
 

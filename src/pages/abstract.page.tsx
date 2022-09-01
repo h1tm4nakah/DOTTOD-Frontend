@@ -1,5 +1,5 @@
 import {useTranslation} from "react-i18next";
-import image from "../assets/images/gen6.png";
+import image from "../assets/images/gen6.jpg";
 import React, {useEffect} from "react";
 import {ZoomableImage} from "../components/ZoomableImage.component";
 
@@ -16,7 +16,7 @@ export function AbstractPage() {
                     <div className="piece-image">
                         <ZoomableImage alt="high quality photo of a computer projecting an image on space" src={image} />
                     </div>
-                    <small><b>prompt:</b> high quality photo of a computer projecting an image on space</small>
+                    <p className="piece-description"><small><b>prompt:</b> a watercolour painting of an apartment on uranus looking onto earth's problems</small></p>
                 </div>
                 <div className="col-12 col-md-8 mt-3 mt-md-0">
                     <h3><b>{t('HEADER_ABSTRACT')}</b></h3>
