@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react";
-import {Link, LinkProps, useMatch, useResolvedPath} from "react-router-dom";
+import {Link, LinkProps, useMatch, useResolvedPath, useSearchParams} from "react-router-dom";
 import { useTranslation } from 'react-i18next';
 
 function NavLink({ children, to, ...props }: LinkProps) {
@@ -53,7 +53,7 @@ export function NavigationComponent() {
 
 export const LangSelector = () => {
     const { i18n } = useTranslation();
-    const [selectedLang, setSelectedLang] = useState('it');
+    const [selectedLang, setSelectedLang] = useState(i18n.language);
 
     const changeLanguage = (language: string) => {
         setSelectedLang(language);

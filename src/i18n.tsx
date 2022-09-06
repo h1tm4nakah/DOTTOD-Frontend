@@ -30,7 +30,18 @@ i18n
     // for all options read: https://www.i18next.com/overview/configuration-options
     .init({
         resources,
-        lng: "it",
+        order: ['querystring', 'cookie', 'localStorage', 'sessionStorage', 'navigator', 'htmlTag', 'path', 'subdomain'],
+        lookupQuerystring: 'lng',
+        lookupCookie: 'i18next',
+        lookupLocalStorage: 'i18nextLng',
+        lookupSessionStorage: 'i18nextLng',
+        lookupFromPathIndex: 0,
+        lookupFromSubdomainIndex: 0,
+
+        // cache user language on
+        caches: ['localStorage', 'cookie'],
+        excludeCacheFor: ['cimode'],
+
         fallbackLng: "en",
     });
 
